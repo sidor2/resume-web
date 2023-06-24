@@ -31,4 +31,8 @@ jobs:
 
       - name: Upload to S3
         run: |
-          aws s3 sync . s3://s3websitestack-websitebucket75c24d94-1dsqpn58rypwb --delete
+          aws s3 sync . s3://s3websitestack-websitebucket75c24d94-1dsqpn58rypwb --delete | tee upload.log
+
+      - name: Show upload output
+        run: |
+          cat upload.log
