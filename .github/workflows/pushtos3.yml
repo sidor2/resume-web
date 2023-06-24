@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 env:
     CDK_DEFAULT_REGION: ${{ secrets.CDK_DEFAULT_REGION}}
