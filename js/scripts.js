@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded', event => {
             few: "rd",
             other: "th"
         };
-        const suffix = suffixes[ordinalRules.select(number)];
+        const suffix = suffixes[ordinalRules.select(counter)];
         const value = number + suffix;
 
         var outputElement = document.getElementById('counter-output');
