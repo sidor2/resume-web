@@ -31,4 +31,19 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    (function() {
+    // Perform the API GET request
+    fetch(`${document.location.origin}/counter`)
+      .then(response => response.json())
+      .then(data => {
+        // Display the response
+        var outputElement = document.getElementById('counter-output');
+        outputElement.textContent = "API response: " + DOMPurify.sanitize(JSON.stringify(data));
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        alert("An error occurred. Please try again.");
+      });
+  })();
+
 });
