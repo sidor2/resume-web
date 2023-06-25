@@ -10922,6 +10922,10 @@ p.lead {
   }
 }
 
+#counter-output {
+  margin-top: 1.5rem;
+}
+
 .aws-certs {
   display: inline-flex;
   align-items: center;
