@@ -49,7 +49,7 @@ window.addEventListener('DOMContentLoaded', event => {
             other: "th"
         };
         const suffix = suffixes[ordinalRules.select(counter)];
-        const value = number + suffix;
+        const value = counter + suffix;
 
         var outputElement = document.getElementById('counter-output');
         outputElement.textContent = `Welcome to my page! You are the ${value} visitor.`;
