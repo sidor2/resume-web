@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', event => {
       .then(data => {
         // Display the response
         var outputElement = document.getElementById('counter-output');
-        outputElement.textContent = `Welcome to my page! You are the ${DOMPurify.sanitize(JSON.stringify(data)["data"])} visitor.`;
+        outputElement.textContent = `Welcome to my page! You are the ${DOMPurify.sanitize(JSON.stringify(data["data"]))} visitor.`;
         console.log(JSON.stringify(data)["data"]);
       })
       .catch(error => {
