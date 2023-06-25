@@ -37,8 +37,22 @@ window.addEventListener('DOMContentLoaded', event => {
       .then(response => response.json())
       .then(data => {
         // Display the response
+
+        let counter = DOMPurify.sanitize(JSON.stringify(data["data"]));
+        let counter = counter.replace(/['"]+/g, '');
+
+        const ordinalRules = new Intl.PluralRules("en", {type: "ordinal"});
+          const suffixes = {
+            one: "st",
+            two: "nd",
+            few: "rd",
+            other: "th"
+        };
+        const suffix = suffixes[ordinalRules.select(number)];
+        const value = number + suffix;
+
         var outputElement = document.getElementById('counter-output');
-        outputElement.textContent = `Welcome to my page! You are the ${DOMPurify.sanitize(JSON.stringify(data["data"]))} visitor.`;
+        outputElement.textContent = `Welcome to my page! You are the ${value} visitor.`;
         console.log(JSON.stringify(data)["data"]);
       })
       .catch(error => {
