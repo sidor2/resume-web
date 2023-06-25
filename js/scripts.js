@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', event => {
         // Display the response
 
         let counter = DOMPurify.sanitize(JSON.stringify(data["data"]));
-        let counter = counter.replace(/['"]+/g, '');
+        counter = counter.replace(/['"]+/g, '');
 
         const ordinalRules = new Intl.PluralRules("en", {type: "ordinal"});
           const suffixes = {
