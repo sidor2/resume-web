@@ -10921,6 +10921,14 @@ p.lead {
     display: block;
   }
 }
+
+.aws-certs {
+  display: inline-flex;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  /* padding-left: 2.15rem; */
+}
+
 .social-icons .social-icon {
   display: inline-flex;
   align-items: center;
@@ -10932,6 +10940,7 @@ p.lead {
   border-radius: 100%;
   font-size: 1.5rem;
   margin-right: 1.5rem;
+  margin-left: 2.1rem;
 }
 .social-icons .social-icon:last-child {
   margin-right: 0;
